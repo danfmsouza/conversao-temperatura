@@ -37,7 +37,7 @@ jobs:
       - name: Deploy to Kubernetes cluster
         uses: Azure/k8s-deploy@v1.5
         with:
-          image: danfmsouza/conversao-temperatura:v0.${{ github.run_number }}
+          images: danfmsouza/conversao-temperatura:v0.${{ github.run_number }}
           manifests: |
             ./src/deployment-conversao-temperatura.yaml
             
